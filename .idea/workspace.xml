@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d30b4196-330e-4be5-9a11-ed964d34b003" name="Default Changelist" comment="" />
+    <list default="true" id="d30b4196-330e-4be5-9a11-ed964d34b003" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +16,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1Wngb6QonIbj2ujUdaB3uF9XWMv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -74,6 +80,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="72" y="183" key="#Notifications/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1579796617164" />
+    <state x="640" y="257" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1581771804505">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="640" y="257" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581771804505" />
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580349558445">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -114,10 +124,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="163" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581105519563" />
-    <state x="661" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1581679213194">
+    <state x="661" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1581771982785">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="661" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581679213194" />
+    <state x="661" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1581771982785" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
