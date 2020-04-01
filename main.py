@@ -1,6 +1,6 @@
 import CppHeaderParser
 import os
-import argparse
+import sys
 
 
 def find_files(path, extension, extension2, excludes):
@@ -16,7 +16,25 @@ def find_files(path, extension, extension2, excludes):
                 list_all_test_file_paths.append(root + "/" + file_name)
 
 
-def main():
+def main(argv):
+    dir = os.getcwd()
+    isExclusion = False
+    isDirectory = False
+
+    exclusionList = list()
+    for v in argv:
+        if v.startswith("-"):
+            if "exclude" in v:
+                isExclusion = True
+            elif "dir" in v:
+                isDirectory = True
+        else:
+            if isExclusion:
+                exclusionList.append(v)
+            elif isDirectory:
+                dir = v
+
+    find_files(dir, ".h", ".cpp", exclusionList)
     print("Processing...")
     for x, idx in enumerate(list_all_file_paths):
         # Assigns cppheader file to current file in the list
@@ -87,24 +105,7 @@ def list_check(list_x, list_y):
     return list(set(list_x) - set(list_y))
 
 
-def get_inputs():
-    excludes = list()
-    print("================================================================================")
-    print("This is the menu to select folders you want CppParser to ignore.")
-    print("You will be asked to enter the name of each folder, one by one, that you wish to skip.")
-    print("Folders must be below the current working directory (CWD) in hierarchy, and when specified, nothing within will be parsed.")
-    print("================================================================================")
-    print("Enter folder names exactly as seen in file explorer.")
-    print("To finish, enter the word || done || or leave blank and press Enter.\n")
-    while True:
-        i = input("Enter name of folder(s) below CWD to exclude: ")
-        if i.strip() == 'done' or 'none':
-            return excludes
-        else:
-            excludes.append(i)
-
-
-my_file_path = os.path.dirname(os.path.abspath(__file__))   # os.path.dirname(__file__)  # Directory containing main.py
+my_file_path = os.path.dirname(os.path.abspath(__file__))  # os.path.dirname(__file__)  # Directory containing main.py
 
 list_all_test_files = []  # Initialise empty container list for test cpp files
 
@@ -118,18 +119,9 @@ old_methods = []  # Initialise container for methods found when scanning directo
 
 create_curr_test_list()
 
-find_files(my_file_path, '.h', '.cpp', get_inputs())  # Populates list_all_files[] with .h files it has found
-
 if __name__ == '__main__':
-    main()
+    main(sys.argv[1:])
 
 print("\n")
 print("Program has finished!")
-
-
-
-
-
-
-
 
